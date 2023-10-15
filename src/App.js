@@ -7,7 +7,7 @@ import { educationData } from "./components/Education/EducationData";
 import { feedbackData } from "./components/Feedback";
 import { Feedback } from "./components/Feedback";
 import { Timeline } from "./components/Timeline";
-
+import { Address } from "./components/Address";
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
       <Experience data={experienceData} />
       <Feedback data={feedbackData} />
       <Timeline />
+      <Address />
     </div>
   );
 }
