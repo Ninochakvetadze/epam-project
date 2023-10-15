@@ -1,4 +1,4 @@
-import {Navigation} from "./components/Navigation";
+import {Panel} from "./components/Panel";
 import { AboutMe } from "./components/AboutMe/index";
 import Experience from "./components/Experience/Experience";
 import { experienceData } from './components/Experience/ExperienceData'
@@ -10,7 +10,7 @@ import { Feedback } from "./components/Feedback";
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      <Panel />
       <AboutMe />
       <Education data={educationData} />
       <Experience data={experienceData} />

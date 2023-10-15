@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaUser, FaGraduationCap, FaBriefcase, FaComment, FaLocationArrow, FaPencilAlt } from 'react-icons/fa';
 
-export function Navigation () {
+ function Navigation () {
   return (
     <nav>
       <ul>
@@ -15,4 +15,4 @@ export function Navigation () {
     </nav>
   );
 };
-
+ export {Navigation}
