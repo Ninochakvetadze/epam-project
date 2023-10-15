@@ -6,6 +6,9 @@ import Education from "./components/Education/Education";
 import { educationData } from "./components/Education/EducationData";
 import { feedbackData } from "./components/Feedback";
 import { Feedback } from "./components/Feedback";
+import { Timeline } from "./components/Timeline";
+
+
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
       <Education data={educationData} />
       <Experience data={experienceData} />
       <Feedback data={feedbackData} />
+      <Timeline />
     </div>
   );
 }
