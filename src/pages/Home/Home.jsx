@@ -5,10 +5,10 @@ import "../../assets/styles/components/global.scss"
 
 export function HomePage () {
     return (
-        <>
+        <div className="container">
         <PhotoBox />
         <Button text="Find out more" className="homeButton"/>
-        </>
+        </div>
         
     )
 }

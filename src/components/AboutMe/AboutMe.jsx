@@ -1,10 +1,10 @@
 import React from 'react';
-import Box from './Box'; // Adjust the path to the actual location of the AboutMe component.
+import PhotoBox from '../PhotoBox/PhotoBox'
 
 const AboutMe = () => {
   return (
     <div>
-      <Box title="About Me" content="I am Nino Chakvetadze, junior Front-end developer and Psycho-social Specialist
+      <PhotoBox title="About Me" content="I am Nino Chakvetadze, junior Front-end developer and Psycho-social Specialist
         My adventure in IT began in 2022 - I've started learning HTML/CSS courses. After that, I've completed
         JavaScript/React courses and have got some certifications. I've also completed some online courses on
         Udemy, FreeCodeCamp and LinkedIn online platform.

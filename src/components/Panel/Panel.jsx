@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navigation } from '../Navigation';
-import PhotoBox from './PhotoBox';
+import PhotoBox from '../PhotoBox/PhotoBox';
 
 const Panel = () => {
   const [isPanelVisible, setPanelVisibility] = useState(false);
