@@ -1,34 +1,39 @@
-import React, { useState } from 'react';
-import { Navigation } from '../Navigation';
-import PhotoBox from '../PhotoBox/PhotoBox';
+import React, { useState } from "react";
+import { FiMenu } from 'react-icons/fi'; 
+import Navigation from "../Navigation/Navigation";
+import PhotoBox from "../PhotoBox/PhotoBox";
+import "../../assets/styles/components/global.scss";
 
-const Panel = () => {
-  const [isPanelVisible, setPanelVisibility] = useState(false);
+function Panel() {
+  const [isPanelVisible, setPanelVisibility] = useState(true);
 
   const togglePanelVisibility = () => {
     setPanelVisibility(!isPanelVisible);
   };
 
-  return (
-    <header>
-      <button onClick={togglePanelVisibility} className="hamburger-button">
-        ☰
-      </button>
-      {isPanelVisible && (
-        <>
-          <section>
-            <PhotoBox />
-          </section>
-          <nav role="navigation">
-            <Navigation />
-          </nav>
-          
-        </>
-        
-      )}
-      
-    </header>
-  );
-};
+  const panelStyle = {
+    display: isPanelVisible ? "block" : "none",
+  };
 
-export { Panel };
+  const goBack = () => {
+    setPanelVisibility(false);
+  };
+
+  return (
+    <div className="toggleMenu">
+        <FiMenu className="burgerIcon" onClick={togglePanelVisibility}/> {/* Burger menu icon */}
+      <div style={panelStyle} className="panel">
+        <PhotoBox />
+        <Navigation />
+        <div className="goBackButtonWrapper">
+          <button className="goBackButton" onClick={goBack}>
+            Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+export {Panel};

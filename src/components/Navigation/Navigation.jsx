@@ -5,7 +5,7 @@ import { FaUser, FaGraduationCap, FaBriefcase, FaComment, FaLocationArrow, FaPen
   return (
     <nav>
       <ul>
-        <li><a href="#about"><FaUser /> About Me</a></li>
+        <li className='navList'><a href="#about"><FaUser /> About Me</a></li>
         <li><a href="#education"><FaGraduationCap /> Education</a></li>
         <li><a href="#experience"><FaPencilAlt /> Experience</a></li>
         <li><a href="#portfolio"><FaBriefcase /> Portfolio</a></li>
@@ -15,4 +15,4 @@ import { FaUser, FaGraduationCap, FaBriefcase, FaComment, FaLocationArrow, FaPen
     </nav>
   );
 };
- export {Navigation}
+ export default Navigation;

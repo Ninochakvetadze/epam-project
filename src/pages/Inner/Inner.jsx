@@ -8,20 +8,27 @@ import { feedbackData } from "../../components/Feedback";
 import { Feedback } from "../../components/Feedback";
 import { Timeline } from "../../components/Timeline";
 import { Address } from "../../components/Address";
-
+import { Skills } from "../../components/Skills/Skills";
+import { Portfolio } from '../../components/Portfolio/Portolio'
+import '../../assets/styles/components/global.scss'
 
 function Inner() {
   return (
-    <div className="App">
+    <div className="app">
       <Panel />
-      <AboutMe />
-      <Education data={educationData} />
-      <Experience data={experienceData} />
-      <Feedback data={feedbackData} />
-      <Timeline />
-      <Address />
+      {/* <div className="contentContainer">
+        <AboutMe />
+        <Education data={educationData} />
+        <Experience data={experienceData} />
+        <Skills />
+        <Portfolio />
+        <Feedback data={feedbackData} />
+        <Timeline />
+        <Address />
+      </div> */}
+      
     </div>
   );
 }
 
-export default Inner;
+export {Inner};

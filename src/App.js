@@ -1,10 +1,12 @@
 import { HomePage } from "./pages/Home/Home";
+import { Inner } from './pages/Inner/Inner'
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <>
+      {/* <HomePage /> */}
+      <Inner />
+    </>
   );
 }
 
