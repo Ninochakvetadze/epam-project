@@ -2,7 +2,8 @@
 
 .toggleMenu {
     display: flex;
-    width: 27%;
+    width: 300px;
+    position: fixed;
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -13,30 +14,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100vh;
     color: #ffffff;
 
     nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         ul > li {
             display: flex;
             justify-content: space-between;
             list-style: none;
             text-decoration: none;
             font-size: $mediumFontSize;
-            padding-left: 10px;
         }
         ul > li :active {
             color: $primaryTextColor;
         }
         ul {
-            .navList {
-                padding-right: 30px;
-            }
+            
             a {
                 text-decoration: none;
                 color: $secondaryTextcolor;
             };
         }
+    }
+    .navButton {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: #222935;
+        font-size: $mediumFontSize;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;          
+
+    }        
+    .navButton:hover {
+        color: #26C17E;
     }
 }

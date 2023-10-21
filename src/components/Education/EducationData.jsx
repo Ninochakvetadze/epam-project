@@ -1,14 +1,16 @@
 
 const educationData = [
     {
-        date: '2013 - 2017',
+        dateFrom: '2013',
+        dateTo: '2017',
         title: 'Bachelor of Educational Psychology',
-        company: 'Ilia State Univerisy',
+        description: 'I`ve graduated Ilia State Univerisy. The Faculty of Science and Art',
     },
     {
-        date: '2017 - 2019',
+        dateFrom: '2017',
+        dateTo: '2019',
         title: 'Master of Educational Psychology',
-        company: 'Ilia State Univerisy',
+        description: 'I`ve graduated Ilia State Univerisy. The Faculty of Science and Art',
     },
 ];
  export {educationData}

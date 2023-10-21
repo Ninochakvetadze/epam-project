@@ -15,8 +15,10 @@ import '../../assets/styles/components/global.scss'
 function Inner() {
   return (
     <div className="app">
-      <Panel />
-      {/* <div className="contentContainer">
+      {/* <div className="innerNav">
+      <Panel />  
+      </div> */}
+      <div className="contentContainer">
         <AboutMe />
         <Education data={educationData} />
         <Experience data={experienceData} />
@@ -25,7 +27,7 @@ function Inner() {
         <Feedback data={feedbackData} />
         <Timeline />
         <Address />
-      </div> */}
+      </div>
       
     </div>
   );

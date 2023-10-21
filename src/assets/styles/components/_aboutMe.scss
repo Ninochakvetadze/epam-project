@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+.aboutMeContainer {
+    h1 {
+        font-size: $largeFontsize;
+        color: $primaryTextColor;
+    }
+    p {
+        width: 964px;
+        color: $secondaryTextcolor;
+        font-size: $smallFontSize;
+    }
+}

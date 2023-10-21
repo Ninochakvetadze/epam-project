@@ -1,0 +1,32 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.educationDetails {
+    @include titleStyle;
+    .educationList {
+        display: flex;
+        padding-bottom: 50px;
+        .educationDate {
+            padding: 0 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .verticalLine {
+                border-left: 4px solid $primaryTextColor;
+                padding-top: 80px;
+            }
+        }
+        .educationItem {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #EEEEEE;
+            padding: 15px;
+            .educationTitle {
+                font-size: $mediumFontSize;
+                font-weight: bold;
+            }
+        }
+    }
+}

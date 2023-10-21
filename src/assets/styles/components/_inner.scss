@@ -1,11 +1,9 @@
 @import './variables.scss';
 .app {
     display: flex;
-    header {
-        width: 40%;
-        background-color: $backgroundColor;
-    }
-    .contentContainer {
-
+    .innerNav {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
     }
 }

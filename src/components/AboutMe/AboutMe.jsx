@@ -2,7 +2,7 @@ import React from 'react';
 
 const Box = ({ title, content }) => {
   return (
-    <div>
+    <div className='aboutMeContainer'>
       <h1>{title}</h1>
       <p>{content}</p>
     </div>
