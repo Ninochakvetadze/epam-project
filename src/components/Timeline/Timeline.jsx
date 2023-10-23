@@ -1,6 +1,5 @@
 import React from 'react';
 import { TimelineData } from './TimelineData';
-import "../../assets/styles/components/global.scss"
 
 const Timeline = () => (
   <div className="timeline">

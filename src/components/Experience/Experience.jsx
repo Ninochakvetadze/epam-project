@@ -1,6 +1,4 @@
 import React from 'react';
-import "../../assets/styles/components/global.scss";
-
 
 const Experience = ({ data }) => {
   return (

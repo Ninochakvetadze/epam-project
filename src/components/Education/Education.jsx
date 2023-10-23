@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../assets/styles/components/global.scss"
+
 const Education = ({ data }) => {
   return (
     <div className="educationDetails">

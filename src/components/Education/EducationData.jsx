@@ -1,4 +1,3 @@
-
 const educationData = [
     {
         dateFrom: '2013',

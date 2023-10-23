@@ -8,27 +8,6 @@
         color: $primaryTextColor;
         padding: 30px 0;
     }
-    .addressLine {
-        color: $secondaryTextcolor;
-        display: flex;
-        padding: 15px 0;
-        .addressLabel {
-            .socailIcon{
-                color: $primaryTextColor;
-                width: 25px;
-                height: 25px;
-                padding: 0 20px;
-            }
-        }
-        .socialLink {
-            text-decoration: none;
-            color: $secondaryTextcolor;
-        }
-        .socialLink:hover{
-            cursor: pointer;
-            color: $primaryTextColor;
-        }
-    }
     .socialLine {
         display: flex; 
         flex-direction: column;
@@ -38,6 +17,12 @@
             color: $secondaryTextcolor;
             display: flex;
             padding-bottom: 15px;
+            .firstTwoIcons {
+                color: $primaryTextColor;
+                width: 25px;
+                height: 25px;
+                padding: 0 20px;
+            }
             .socailIcon{
                 color: $primaryTextColor;
                 width: 25px;
@@ -58,6 +43,6 @@
     @media (max-width: $smDesktop) {
         display: flex;
         flex-direction: column;
-        align-items: center;   
+        align-items: center;
     }
 }
