@@ -10,7 +10,7 @@ const Feedback = ({ data }) => {
                     <div className="userWrapper">
                         <img src={feedback.userImage} alt="User" />
                         <p className="userInfo">{feedback.userInfo}</p>
-                        <p className="userURL">{feedback.userURL}</p>  
+                        <a className="userURL" href={feedback.userURL} target="_blank" rel="noopener noreferrer">facebook.com</a>
                     </div>
                     
                 </div>

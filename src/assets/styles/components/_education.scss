@@ -2,7 +2,14 @@
 @import "./mixins.scss";
 
 .educationDetails {
+    padding: 50px 0;
     @include titleStyle;
+    h1 {
+        @media (max-width: $smDesktop) {
+            display: flex;
+            justify-content: center;
+        }
+    }
     .educationList {
         display: flex;
         padding-bottom: 50px;
@@ -27,6 +34,9 @@
                 font-size: $mediumFontSize;
                 font-weight: bold;
             }
+        }
+        @media (max-width: $smDesktop) {
+            width: 90%;
         }
     }
 }

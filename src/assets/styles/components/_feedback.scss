@@ -1,0 +1,52 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.feedbackList {
+    h1 {
+        font-size: $largeFontsize;
+        color: $primaryTextColor;
+    }
+    .feedbackText {
+        max-width: 80%;
+        padding: 20px;
+        .feedbackDescription {
+            font-size: $mediumFontSize;
+            color: $secondaryTextcolor;
+            background-color: #EEEEEE;
+            padding: 20px;
+            line-height: $lineHeighgt;
+        }
+        .userWrapper {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            .userInfo {
+                padding: 0 15px;
+                color: $secondaryTextcolor;
+                font-size: $smallFontSize;
+                font-weight: bold;
+            }
+        }
+        .userWrapper img {
+            width: 50px;
+        }
+        .userWrapper a {
+            text-decoration: none;
+            color: $primaryTextColor;
+            font-size: $smallFontSize;
+            font-weight: bold;
+        }
+        @media (max-width: $smDesktop) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+        }
+    }
+    @media (max-width: $smDesktop) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}

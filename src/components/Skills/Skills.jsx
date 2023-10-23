@@ -1,25 +1,22 @@
 import React from 'react';
+import "../../assets/styles/components/global.scss"
 
 const skillsData = [
     {
         "language": "HTML",
-        "level": 80
+        "level": 90
     },
     {
         "language": "CSS",
+        "level": 80
+    },
+    {
+        "language": "React",
+        "level": 70
+    },
+    {
+        "language": "JS",
         "level": 60
-    },
-    {
-        "language": "Js",
-        "level": 30
-    },
-    {
-        "language": "С#",
-        "level": 20
-    },
-    {
-        "language": "python",
-        "level": 40
     }
 ];
 
@@ -30,25 +27,14 @@ function Skills() {
             {skillsData.map((lang, index) => {
                 return (
                     <div key={index} className="lang">
-                        <div className="languageLevel">
-                            <span>{lang.language}</span>{" "}
-                            <span>{lang.level + "%"}</span>
-                        </div>
                         <div
                             className="lines"
                             style={{
-                                border: "0.5px solid #ffb400",
-                                maxWidth: "100",
-                                borderRadius: "25",
-                            }}
-                        >
-                            <div
-                                className="percentOfLines"
-                                style={{
-                                    border: "1px solid #ffb400",
-                                    width: lang.level + "%",
-                                }}
-                            ></div>
+                                border: "10px solid #26C17E",
+                                width: lang.level + "%",
+                            }}>
+                                <span>{lang.language} </span>{" "}
+
                         </div>
                     </div>
                 );

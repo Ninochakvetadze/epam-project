@@ -2,8 +2,6 @@ import React from 'react';
 import { FaEnvelope, FaFacebook, FaPhone, FaSkype, FaTwitter } from 'react-icons/fa';
 
 const Address = () => {
-  const name = "Your Name";
-  const address = "123 Address St, City, Country";
   const phone = "500 342 342";
   const email = "office@kamsolutions.pl";
   const twitter = "https://twitter.com/wordpress";
@@ -28,44 +26,60 @@ const Address = () => {
 
   return (
     <div className="address">
-      <h3 className="addressName">{name}</h3>
-      <p className="addressLine">{address}</p>
-      <p className="addressLine">
-        <span className="addressLabel"><FaEnvelope /></span>{' '}
-        <a href={`mailto:${email}`} onClick={handleEmailClick}>
+      <h1>Contacts</h1>
+      <div className="addressList">
+        <div className="addressLine">
+        <span className="addressLabel"><FaEnvelope className='socailIcon'/></span>{' '}
+        <a 
+          href={`mailto:${email}`} 
+          onClick={handleEmailClick} 
+          className='socialLink'
+          target='_blank' rel="noreferrer">
           {email}
         </a>
-      </p>
-      <p className="addressLine">
-        <span className="addressLabel"><FaPhone /></span> {phone}
-      </p>
-      <p className="addressLine">
+      </div>
+      <div className="addressLine">
+        <span className="addressLabel"><FaPhone className='socailIcon'/></span> {phone}
+      </div>
+      <div className="socialLine">
         <span className="addressLabel">
-          <FaTwitter />
+          <FaTwitter className='socailIcon'/>
           Twitter</span>{' '}
-        <a href={twitter} onClick={handleTwitterClick}>
+        <a 
+          href={twitter} 
+          onClick={handleTwitterClick} 
+          className='socialLink'
+          target='_blank' rel="noreferrer">
           {twitter}
         </a>
-      </p>
-      <p className="addressLine">
+      </div>
+      <div className="socialLine">
         <span className="addressLabel">
-          <FaFacebook />
+          <FaFacebook className='socailIcon'/>
           Facebook</span>{' '}
         <a
           href={facebook}
           onClick={handleFacebookClick}
+          className='socialLink'
+          target='_blank' rel="noreferrer"
         >
           {facebook}
         </a>
-      </p>
-      <p className="addressLine">
+      </div>
+      <div className="socialLine">
         <span className="addressLabel">
-          <FaSkype />
+          <FaSkype className='socailIcon'/>
           Skype</span>{' '}
-        <a href={`skype:${skype}?chat`} onClick={handleSkypeClick}>
+        <a 
+          href={`skype:${skype}?chat`} 
+          onClick={handleSkypeClick}
+          className='socialLink'
+          target='_blank' rel="noreferrer">
           {skype}
         </a>
-      </p>
+      </div>
+      </div>
+      
     </div>
   );
 };

@@ -4,10 +4,19 @@
     h1 {
         font-size: $largeFontsize;
         color: $primaryTextColor;
+        @media (max-width: $smDesktop) {
+            display: flex;
+            justify-content: center;
+        }
     }
     p {
         width: 964px;
         color: $secondaryTextcolor;
         font-size: $smallFontSize;
+        line-height: $lineHeighgt;
+        @media (max-width: $smDesktop) {
+            width: 90%;
+            text-align: center;
+        }
     }
 }

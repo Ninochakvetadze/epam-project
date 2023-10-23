@@ -1,0 +1,63 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.address {
+    padding: 50px 0;
+    h1 {
+        font-size: $largeFontsize;
+        color: $primaryTextColor;
+        padding: 30px 0;
+    }
+    .addressLine {
+        color: $secondaryTextcolor;
+        display: flex;
+        padding: 15px 0;
+        .addressLabel {
+            .socailIcon{
+                color: $primaryTextColor;
+                width: 25px;
+                height: 25px;
+                padding: 0 20px;
+            }
+        }
+        .socialLink {
+            text-decoration: none;
+            color: $secondaryTextcolor;
+        }
+        .socialLink:hover{
+            cursor: pointer;
+            color: $primaryTextColor;
+        }
+    }
+    .socialLine {
+        display: flex; 
+        flex-direction: column;
+        padding: 15px 0;
+        .addressLabel {
+            font-size: $mediumFontSize;
+            color: $secondaryTextcolor;
+            display: flex;
+            padding-bottom: 15px;
+            .socailIcon{
+                color: $primaryTextColor;
+                width: 25px;
+                height: 25px;
+                padding: 0 20px;
+            }
+        }
+        .socialLink {
+            text-decoration: none;
+            color: $secondaryTextcolor;
+            padding-left: 65px;
+        }
+        .socialLink:hover{
+            cursor: pointer;
+            color: $primaryTextColor;
+        }
+    }
+    @media (max-width: $smDesktop) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+}

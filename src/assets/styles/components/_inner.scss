@@ -1,9 +1,26 @@
 @import './variables.scss';
 .app {
     display: flex;
-    .innerNav {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+    .contentContainer {
+        .backHome{
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            font-weight: 500;
+            padding: 7px 14px;
+            background-color: $primaryTextColor;
+            color: #ffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .backHome:hover {
+            background-color: $secondaryTextcolor;
+
+        }
+        
     }
 }

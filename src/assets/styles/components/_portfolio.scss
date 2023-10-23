@@ -1,0 +1,77 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.portfolio {
+    padding: 50px 0;
+    h1 {
+        font-size: $largeFontsize;
+        color: $primaryTextColor;
+    }
+    .filterSort {
+        .filter > button {
+            border: none;
+            background-color: #ffff;
+            color: $secondaryTextcolor;
+            font-size: $mediumFontSize;
+            font-weight: 500;
+            padding: 5px 3px;
+        }
+    }
+    .portfolioList {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        .item {
+            padding: 12px;
+            .portfolioItem {
+                position: relative;
+                cursor: pointer;
+                transition: transform 0.3s;
+            }
+            .portfolioItem img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.3s;
+            }
+            .itemInfo {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: $secondaryTextcolor;
+                // background: rgba(255, 255, 255, 0.5);
+                color: white;
+                font-size: $mediumFontSize;
+                text-align: center;
+                transform: translateY(100%);
+                display: none;
+                transition: transform 1s ease-in-out;
+                h3 {
+                    color: $primaryTextColor;
+                }
+            }
+            .portfolioItem:hover .itemInfo {
+                transform: translateY(0);
+                display: block;
+            }
+        }
+        @media (max-width: $smDesktop) {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media (max-width: $smDesktop) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,32 @@
+body {
+  background-image: url("../../images/cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .photoBoxWrapepr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+}
+body .photoBoxWrapepr .circlePhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body .photoBoxWrapepr .circlePhoto .userImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .photoBoxWrapepr .userName, body .photoBoxWrapepr .description {
+  color: #ffffff;
+}/*# sourceMappingURL=photoBox.css.map */
