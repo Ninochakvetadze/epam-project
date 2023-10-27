@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+nav {
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+            text-decoration: none;
+            font-size: $mediumFontSize;
+            padding: 10px 0;
+            a {
+                display: flex;
+                width: 150px;
+                justify-content: space-between;
+                text-decoration: none;
+                color: $secondaryTextcolor;   
+                span {
+                    text-align: left;
+                    width: 100px;
+                    @media (max-width: $smTablet) {
+                        display: none;
+                    }  
+                }
+                &:hover {
+                    color: $primaryTextColor;
+                }
+                @media (max-width: $smTablet) {
+                    width: 100%;
+                }  
+            }
+            &:active {
+                color: $primaryTextColor;
+            }  
+            @media (max-width: $smTablet) {
+                padding: 15px 0;
+            } 
+        }
+        @media (max-width: $smTablet) {
+            padding-top: 30px;
+            height: 100vh;
+        } 
+    }
+    @media (max-width: $smTablet) {
+       height: 90%;
+    }  
+}

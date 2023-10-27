@@ -1,14 +1,16 @@
 @import './variables.scss';
 .app {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr auto;
     margin: 0 auto;
     .contentContainer {
+        padding-left: 25px;
+        height: 100vh;
+        overflow-y: auto;
         .backHome{
             position: fixed;
             top: 20px;
-            right: 10px;
+            right: 32px;
             font-weight: 500;
             padding: 7px 14px;
             background-color: $primaryTextColor;
@@ -23,4 +25,5 @@
         }
         
     }
+
 }

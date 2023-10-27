@@ -13,7 +13,8 @@ function Panel() {
   };
 
   const panelStyle = {
-    display: isPanelVisible ? "block" : "none",
+    transition: '.3s',
+    transform: isPanelVisible ? "" : "translateX(-95%)",
   };
 
   const goBack = () => {
@@ -21,9 +22,11 @@ function Panel() {
   };
 
   return (
-    <div className="toggleMenu">
-        <FiMenu className="burgerIcon" onClick={togglePanelVisibility}/> {/* Burger menu icon */}
-      <div style={panelStyle} className="panel">
+    <div style={panelStyle} className="toggleMenu" id="panel">
+      <div className="burger-icon">
+        <FiMenu className="burgerIcon" onClick={togglePanelVisibility}/>
+      </div>
+      <div  className="panel">
         <PhotoBox />
         <Navigation />
         <Button icon={faArrowLeft} text="Go back" className="navButton" onClick={goBack}/>

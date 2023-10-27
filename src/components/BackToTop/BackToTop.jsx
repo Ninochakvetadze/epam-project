@@ -34,6 +34,7 @@ function BackToTopButton() {
         <style>
                 {`
        .backToTop {
+        
          position: fixed;
          bottom: 20px;
          right: 20px;

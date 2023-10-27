@@ -1,7 +1,7 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
-.portfolio {
+.portfolioContainer {
     padding: 50px 0;
     h1 {
         font-size: $largeFontsize;
@@ -28,40 +28,57 @@
         position: relative;
         cursor: pointer;
         overflow: hidden;
+    
         .item {
-            padding: 12px;
-            .portfolioItem {
-                position: relative;
-                cursor: pointer;
-                transition: transform 0.3s;
+          padding: 12px;
+    
+          .portfolioItem {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+    
+            &:hover {
+              transform: scale(1.05); // Enlarge the item on hover
             }
-            .portfolioItem img {
-                width: 100%;
-                height: auto;
-                transition: transform 0.3s;
+    
+            img {
+              width: 100%;
+              height: auto;
+              transition: transform 0.3s;
             }
+    
             .itemInfo {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background-color: $secondaryTextcolor;
-                // background: rgba(255, 255, 255, 0.5);
-                color: white;
-                font-size: $mediumFontSize;
-                text-align: center;
-                transform: translateY(100%);
-                display: none;
-                transition: transform 1s ease-in-out;
-                h3 {
-                    color: $primaryTextColor;
-                }
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              background-color: $secondaryTextcolor;
+              color: white;
+              font-size: $mediumFontSize;
+              text-align: center;
+              transform: translateY(100%);
+              opacity: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    
+              h3 {
+                color: $primaryTextColor;
+              }
+    
+              p {
+                margin-top: 10px;
+              }
             }
-            .portfolioItem:hover .itemInfo {
-                transform: translateY(0);
-                display: block;
-            }
+          }
+    
+          &:hover .portfolioItem .itemInfo {
+            transform: translateY(0);
+            opacity: 1;
+          }
         }
         @media (max-width: $smDesktop) {
             width: 100%;

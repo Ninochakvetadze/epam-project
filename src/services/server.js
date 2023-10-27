@@ -10,11 +10,9 @@ export function makeServer({ environment = 'development' } = {}) {
     },
 
     seeds(server) {
-      
       server.create('education', {
         date: '2021-2022',
         title: 'Bachelor of Science',
-        description: 'Computer Science',
       });
 
       server.create('skill', {
@@ -26,7 +24,7 @@ export function makeServer({ environment = 'development' } = {}) {
     logging: true,
 
     routes() {
-      this.get('/api/educations', (schema, request) => {
+      this.get('/api/education', (schema, request) => {
         return schema.educations.all();
       }, { timing: 3000 });
 
@@ -40,6 +38,7 @@ export function makeServer({ environment = 'development' } = {}) {
       });
     },
   });
+
 
   return server;
 }

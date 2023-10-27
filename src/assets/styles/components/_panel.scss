@@ -1,45 +1,28 @@
 @import "./variables.scss";
 
 .toggleMenu {
-    display: flex;
-    width: 300px;
-    position: fixed;
-    flex-direction: column;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     background-color: $backgroundColor;
+    padding: 0 2rem;
+    position: relative;
+    height: 100vh;
+    .burger-icon {
+        position: absolute;
+        cursor: pointer;
+        top: 20px;
+        right: -20px;
+    }
+    @media (max-width: $smTablet) {
+        padding: 0 10px;
+    }  
 }
 .panel {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     height: 100vh;
     color: #ffffff;
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        ul > li {
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-            text-decoration: none;
-            font-size: $mediumFontSize;
-        }
-        ul > li :active {
-            color: $primaryTextColor;
-        }
-        ul {
-            
-            a {
-                text-decoration: none;
-                color: $secondaryTextcolor;
-            };
-        }
-    }
     .navButton {
         display: flex;
         align-items: center;
@@ -49,7 +32,11 @@
         color: white;
         cursor: pointer;
         transition: background-color 0.3s;          
-
+        .buttonText {
+            @media (max-width: $smTablet) {
+              display: none;
+            }  
+        }
     }        
     .navButton:hover {
         color: #26C17E;

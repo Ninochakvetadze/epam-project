@@ -15,4 +15,10 @@
             object-fit: cover;
         }
     }
+    .userName, .description {
+        text-align: left;
+    }
+    @media (max-width: $smTablet) {
+            display: none;
+    }  
 }

@@ -1,16 +1,21 @@
 import React from 'react';
-import { FaUser, FaGraduationCap, FaBriefcase, FaComment, FaLocationArrow, FaPencilAlt } from 'react-icons/fa';
+import { navItems } from './NavItems';
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  element && element.scrollIntoView({ behavior: 'smooth' });
+};
 
  function Navigation () {
   return (
     <nav>
       <ul>
-        <li className='navList'><a href="#about"><FaUser /> About Me</a></li>
-        <li><a href="#education"><FaGraduationCap /> Education</a></li>
-        <li><a href="#experience"><FaPencilAlt /> Experience</a></li>
-        <li><a href="#portfolio"><FaBriefcase /> Portfolio</a></li>
-        <li><a href="#contacts"><FaLocationArrow /> Contacts</a></li>
-        <li><a href="#feedback"><FaComment /> Feedback</a></li>
+        {navItems.map((item) => (
+          <li key={item.id}>
+            <a href={`#${item.id}`} onClick={() => scrollToSection(item.id)}>
+              {item.icon} <span>{item.label}</span>
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

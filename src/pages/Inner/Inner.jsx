@@ -13,6 +13,8 @@ import { Portfolio } from '../../components/Portfolio/Portolio'
 import { BackToTopButton } from '../../components/BackToTop/BackToTop'
 import Button from '../../components/Button/Button'
 import '../../assets/styles/components/global.scss'
+import { Panel } from "../../components/Panel/Panel"
+import SkillForm from "../../features/skills/skillsForm";
 
 function Inner() {
   const goBackToHome = () => {
@@ -20,12 +22,14 @@ function Inner() {
   };
 
   return (
-    <div className="app">
+    <div className="app" style={{transition: '.3s'}}>
+        <Panel />
       <div className="contentContainer">
         <Button text="Home" onClick={goBackToHome} className="backHome"/>
         <AboutMe />
         <Education data={educationData} />
         <Experience data={experienceData} />
+        <SkillForm />
         <Skills />
         <Portfolio />
         <Feedback data={feedbackData} />

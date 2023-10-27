@@ -1,23 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Education = ({ data }) => {
+const Education = () => {
+  const [educationData, setEducationData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/education') 
+      .then((response) => response.json())
+      .then((data) => {
+        setEducationData(data.education);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching education data:', error);
+        setIsLoading(false);
+      });
+  }, []);
+
   return (
-    <div className="educationDetails">
-        <h1>Education</h1>
-      {data.map((education, index) => (
-        <div key={index} className="educationList">
-          <div className="educationDate">
-            <p >{education.dateFrom}</p>
-            <span className="verticalLine"></span>
-            <p >{education.dateTo}</p>
-          </div>
-          <div className="educationItem">
-            <p className='educationTitle'>{education.title}</p>
-            <p className='educationCompany'>{education.description}</p>
-          </div>
-          
-        </div>
-      ))}
+    <div>
+      <h2>Education</h2>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {educationData ? (
+            educationData.map((edu) => (
+              <li key={edu.id}>
+                {edu.date} - {edu.title}
+              </li>
+            ))
+          ) : (
+            <p>No education data available.</p>
+          )}
+        </ul>
+      )}
     </div>
   );
 };
