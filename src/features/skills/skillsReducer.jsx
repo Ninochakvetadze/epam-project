@@ -11,8 +11,14 @@ const skillsSlice = createSlice({
     addSkill: (state, action) => {
       state.skills.push(action.payload);
     },
+    removeSkill: (state, action) => {
+      state.skills = state.skills.filter(skill => skill.id !== action.payload.id);
+    },
+    initializeSkillsFromLocalStorage: (state, action) => {
+      state.skills = action.payload;
+    },
   },
 });
 
-export const { addSkill } = skillsSlice.actions;
+export const { addSkill, removeSkill, initializeSkillsFromLocalStorage } = skillsSlice.actions;
 export default skillsSlice.reducer;

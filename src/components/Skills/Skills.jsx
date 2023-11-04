@@ -1,24 +1,67 @@
-import React from 'react';
-import skillsData from './SkillsData';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchSkillsData } from '../../features/skills/SkillsAction';
+import SkillForm from '../../features/skills/skillsForm';
 
 function Skills() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSkillsData());
+  }, [dispatch]);
+
+  const [skillsData, setSkillsData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSkillFormOpen, setIsSkillFormOpen] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/skills')
+      .then((response) => response.json())
+      .then((data) => {
+        setSkillsData(data.skills);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching skills data:', error);
+        setIsLoading(false);
+      });
+  }, []);
+
+  const toggleSkillForm = () => {
+    setIsSkillFormOpen(!isSkillFormOpen);
+  };
+
   return (
     <div className="langInfo">
       <h2>Skills</h2>
-      {skillsData.map((lang, index) => {
-        return (
-          <div key={index} className="lang">
-            <div
-              className="lines"
-              style={{
-                border: "10px solid #26C17E",
-                width: lang.level + "%",
-              }}>
-              <span>{lang.language} </span>{" "}
-            </div>
+      <button onClick={toggleSkillForm} className='openForm'>Open Edit</button>
+
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className='skillsContainer'>
+          <div className="skillsFormWrapper">
+            {isSkillFormOpen && <SkillForm />}
           </div>
-        );
-      })}
+          {skillsData.length > 0 ? (
+            skillsData.map((lang, index) => (
+              <div key={index} className="lang">
+                <div
+                  className="lines"
+                  style={{
+                    border: "10px solid #26C17E",
+                    width: lang.level + "%",
+                  }}
+                >
+                  <span>{lang.language}</span>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No skills data available.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

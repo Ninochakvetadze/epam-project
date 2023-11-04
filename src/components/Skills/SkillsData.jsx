@@ -1,19 +1,19 @@
 const skillsData = [
     {
       language: "HTML",
-      level: 90
+      range: 90
     },
     {
       language: "CSS",
-      level: 80
+      range: 80
     },
     {
       language: "React",
-      level: 70
+      range: 70
     },
     {
       language: "JS",
-      level: 60
+      range: 60
     }
   ];
   

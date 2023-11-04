@@ -11,19 +11,7 @@
             position: fixed;
             top: 20px;
             right: 32px;
-            font-weight: 500;
-            padding: 7px 14px;
-            background-color: $primaryTextColor;
-            color: #ffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            @include buttonStyle;
         }
-        .backHome:hover {
-            background-color: $secondaryTextcolor;
-
-        }
-        
     }
-
 }

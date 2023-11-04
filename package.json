@@ -31,7 +31,8 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!/node_modules/"
+      "!/node_modules/",
+      "'!**/vendor/**',"
     ],
     "coverageThreshold": {
       "global": {
@@ -61,6 +62,7 @@
     ]
   },
   "devDependencies": {
-    "miragejs": "^0.1.47"
+    "jest": "^27.5.1",
+    "miragejs": "^0.1.48"
   }
 }

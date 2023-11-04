@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import {store} from './app/store'
-// import { makeServer } from './services/server';
+// import { makeServer } from './services/server'
 
 // if (!window.server) {
 //   window.server = makeServer();

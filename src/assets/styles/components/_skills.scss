@@ -3,6 +3,10 @@
 
 .langInfo {
     width: 80%;
+    position: relative;
+    @media (max-width: 1090px) {
+            
+    }
     h2 {
         font-size: $largeFontsize;
         color: $primaryTextColor;
@@ -21,4 +25,12 @@
         flex-direction: column;
         align-items: center;
     }
+    .openForm {
+        @media (max-width: 1090px) {
+          position: initial;
+        }
+    }
+}
+.skillsContainer {
+    width: 80%;
 }

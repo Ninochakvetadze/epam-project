@@ -1,30 +1,30 @@
 import React from 'react';
-import { FaEnvelope, FaFacebook, FaPhone, FaSkype, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaFacebook, FaPhone, FaGithub } from 'react-icons/fa';
 
 
 const addressData = [
   {
-    icon: <FaEnvelope className='firstTwoIcons' />,
-    label: "500 342 342",
+    icon: <FaEnvelope className='firstTwoIcons' data-testid="icon"/>,
+    label: "N_chakvetadze@hayoo.com",
   },
   {
-    icon: <FaPhone className='firstTwoIcons' />,
-    label: "office@kamsolutions.pl",
+    icon: <FaPhone className='firstTwoIcons' data-testid="icon" />,
+    label: "+995 598 908 850",
   },
   {
-      icon: <FaTwitter className='socailIcon' />,
-      label: 'Twitter',
-      link: 'https://twitter.com/wordpress',
+      icon: <FaGithub className='socailIcon' data-testid="icon"/>,
+      label: 'GitHub',
+      link: 'https://github.com/Ninochakvetadze',
     },
     {
-      icon: <FaFacebook className='socailIcon' />,
+      icon: <FaFacebook className='socailIcon' data-testid="icon"/>,
       label: 'Facebook',
-      link: 'https://facebook.com/facebook',
+      link: 'https://www.facebook.com/nino.chakvetadze.967?mibextid=ZbWKwL',
     },
     {
-      icon: <FaSkype className='socailIcon' />,
-      label: 'Skype',
-      link: 'kamsolutions.pl',
+      icon: <FaLinkedin className='socailIcon' data-testid="icon"/>,
+      label: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/nino-chakvetadze-509738257',
     },
 ]
 

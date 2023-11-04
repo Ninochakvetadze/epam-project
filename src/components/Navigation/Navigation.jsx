@@ -1,5 +1,6 @@
 import React from 'react';
 import { navItems } from './NavItems';
+
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
   element && element.scrollIntoView({ behavior: 'smooth' });

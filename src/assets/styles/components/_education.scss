@@ -1,42 +1,35 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
-.educationDetails {
+.educationWrapper {
     padding: 50px 0;
-    @include titleStyle;
-    h1 {
+    
+    h2 {
+        font-size: 25px;
+        color: #26C17E;
         @media (max-width: $smDesktop) {
             display: flex;
             justify-content: center;
         }
     }
-    .educationList {
-        display: flex;
-        padding-bottom: 50px;
-        .educationDate {
-            padding: 0 50px;
+    ul {
+        li{
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            .verticalLine {
-                border-left: 4px solid $primaryTextColor;
-                padding-top: 80px;
+            list-style-type: none;
+            padding: 30px 0;
+            font-size: $mediumFontSize;
+            color: $primaryTextColor;
+            .eduDate {
+                padding-right: 30px;
             }
-        }
-        .educationItem {
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: #EEEEEE;
-            padding: 15px;
-            .educationTitle {
-                font-size: $mediumFontSize;
-                font-weight: bold;
+            .educationDescription {
+                display: flex;
+                flex-direction: column;
+                .eduTitle {
+                color: $secondaryTextcolor;
             }
-        }
-        @media (max-width: $smDesktop) {
-            width: 90%;
+            }
+            
         }
     }
 }

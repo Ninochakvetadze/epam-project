@@ -8,7 +8,7 @@ const Education = () => {
     fetch('/api/education') 
       .then((response) => response.json())
       .then((data) => {
-        setEducationData(data.education);
+        setEducationData(data.educations);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -18,16 +18,20 @@ const Education = () => {
   }, []);
 
   return (
-    <div>
+    <div className='educationWrapper'>
       <h2>Education</h2>
       {isLoading ? (
-        <p>Loading...</p>
+        <p>Loading...   </p>
       ) : (
-        <ul>
+        <ul className='educationList'>
           {educationData ? (
             educationData.map((edu) => (
-              <li key={edu.id}>
-                {edu.date} - {edu.title}
+              <li key={edu.id} className='educationItem'>
+                <p className="eduDate">{edu.date}</p>
+                <div className="educationDescription">
+                  <p className="eduTitle">{edu.title}</p>
+                  <p className="eduDiscription">{edu.discription}</p>
+                </div>
               </li>
             ))
           ) : (

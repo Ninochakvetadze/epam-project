@@ -22,9 +22,9 @@ function Panel() {
   };
 
   return (
-    <div style={panelStyle} className="toggleMenu" id="panel">
+    <div style={panelStyle} className="toggleMenu" id="panel" >
       <div className="burger-icon">
-        <FiMenu className="burgerIcon" onClick={togglePanelVisibility}/>
+        <FiMenu className="burgerIcon" onClick={togglePanelVisibility} />
       </div>
       <div  className="panel">
         <PhotoBox />

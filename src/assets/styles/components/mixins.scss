@@ -9,3 +9,19 @@
     }
     
 }
+
+
+@mixin buttonStyle {
+    font-weight: 500;
+    padding: 7px 14px;
+    background-color: #26c07d;
+    font-weight: 500px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: $secondaryTextcolor;
+    }
+}
