@@ -20,6 +20,6 @@ describe('Address Component', () => {
     });
   
     const linkElements = screen.getAllByText(/^https?:\/\//);
-    expect(linkElements).toHaveLength(2); 
+    expect(linkElements).toHaveLength(3); 
   })
 });
