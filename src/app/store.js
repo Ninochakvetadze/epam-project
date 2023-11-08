@@ -18,4 +18,5 @@ const store = configureStore({
   middleware: [thunk, localStorageMiddleware], 
 });
 
+
 export { store };

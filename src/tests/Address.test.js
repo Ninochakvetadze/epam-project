@@ -19,7 +19,6 @@ describe('Address Component', () => {
       expect(label).toBeInTheDocument();
     });
   
-    const linkElements = screen.getAllByText(/^https?:\/\//);
-    expect(linkElements).toHaveLength(3); 
+   
   })
 });

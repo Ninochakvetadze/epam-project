@@ -3,7 +3,7 @@ import addressData from './AddressData';
 
 const Address = () => {
   return (
-    <div className="address" id='contacts'>
+    <section className="address" id='contacts'>
       <h1>Contacts</h1>
       {addressData.map((item, index) => (
         <div className="socialLine" key={index}>
@@ -17,7 +17,7 @@ const Address = () => {
           ) : null}
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

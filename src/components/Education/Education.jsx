@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import LoadingSpinner from '../Loading/Loading';
+
 
 const Education = () => {
   const [educationData, setEducationData] = useState(null);
@@ -18,10 +20,10 @@ const Education = () => {
   }, []);
 
   return (
-    <div className='educationWrapper'>
+    <section className='educationWrapper' id='education'>
       <h2>Education</h2>
       {isLoading ? (
-        <p>Loading...   </p>
+        <LoadingSpinner />
       ) : (
         <ul className='educationList'>
           {educationData ? (
@@ -39,7 +41,7 @@ const Education = () => {
           )}
         </ul>
       )}
-    </div>
+    </section>
   );
 };
 

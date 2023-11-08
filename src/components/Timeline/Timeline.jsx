@@ -2,7 +2,7 @@ import React from 'react';
 import { TimelineData } from './TimelineData';
 
 const Timeline = () => (
-  <div className="timeline">
+  <section className="timeline">
     <h1>Timeline</h1>
     <div className='timelineContainer'>
         {TimelineData.map((event, index) => (
@@ -20,7 +20,7 @@ const Timeline = () => (
             ))}
     </div>
     
-  </div>
+  </section>
 );
 
 export { Timeline };

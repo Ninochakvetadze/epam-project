@@ -2,7 +2,7 @@ import React from "react";
 
 const Feedback = ({ data }) => {
     return (
-        <div className="feedbackList" id="feedback">
+        <section className="feedbackList" id="feedback">
             <h1 className="feedbackTitle">Feedbacks</h1>
             {data.map((feedback, index) => (
                 <div key={index} className="feedbackText">
@@ -15,7 +15,7 @@ const Feedback = ({ data }) => {
                     
                 </div>
             ))}
-        </div>
+        </section>
     )
 }
 

@@ -32,7 +32,7 @@ function Skills() {
   };
 
   return (
-    <div className="langInfo">
+    <section className="langInfo">
       <h2>Skills</h2>
       <button onClick={toggleSkillForm} className='openForm'>Open Edit</button>
 
@@ -62,7 +62,29 @@ function Skills() {
           )}
         </div>
       )}
-    </div>
+      <div className="skills-container">
+          <table>
+            <tbody>
+              <tr className="skills-container__range">
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <tbody>
+              <tr className="skills-container__text">
+                <td>Beginner</td>
+                <td>Proficient</td>
+                <td>Expert</td>
+                <td>Master</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+    </section>
   );
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Experience = ({ data }) => {
   return (
-    <div className="experienceList" id='experience'>
+    <section className="experienceList" id='experience'>
         <h1>Experience</h1>
       {data.map((experience, index) => (
         <div key={index} className="experienceList">
@@ -16,7 +16,7 @@ const Experience = ({ data }) => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

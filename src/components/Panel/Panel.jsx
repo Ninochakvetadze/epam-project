@@ -22,7 +22,7 @@ function Panel() {
   };
 
   return (
-    <div style={panelStyle} className="toggleMenu" id="panel" >
+    <section style={panelStyle} className="toggleMenu" id="panel" >
       <div className="burger-icon">
         <FiMenu className="burgerIcon" onClick={togglePanelVisibility} />
       </div>
@@ -31,7 +31,7 @@ function Panel() {
         <Navigation />
         <Button icon={faArrowLeft} text="Go back" className="navButton" onClick={goBack}/>
       </div>
-    </div>
+    </section>
   );
 }
 

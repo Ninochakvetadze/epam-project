@@ -37,8 +37,12 @@ function SkillForm({ isSkillFormOpen }) {
   const handleSubmit = (values, { resetForm }) => {
     dispatch(addSkill({ language: values.skillName, level: values.skillRange }));
 
+    // Get the existing skills data from local storage or initialize an empty array
     const skillsData = JSON.parse(localStorage.getItem('skills')) || [];
+
+    // Push the new skill data into the array
     skillsData.push({ language: values.skillName, level: values.skillRange });
+
     localStorage.setItem('skills', JSON.stringify(skillsData));
 
     resetForm();

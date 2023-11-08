@@ -5,7 +5,7 @@ import { FaEnvelope, FaLinkedin, FaFacebook, FaPhone, FaGithub } from 'react-ico
 const addressData = [
   {
     icon: <FaEnvelope className='firstTwoIcons' data-testid="icon"/>,
-    label: "N_chakvetadze@hayoo.com",
+    label: "N_chakvetadze@yahoo.com",
   },
   {
     icon: <FaPhone className='firstTwoIcons' data-testid="icon" />,
