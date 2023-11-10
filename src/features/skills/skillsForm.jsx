@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
 import { addSkill } from './skillsReducer';
 
-function SkillForm({ isSkillFormOpen }) {
+function SkillForm({ isSkillFormOpen, updateSkillsData }) {
   const dispatch = useDispatch();
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
@@ -37,10 +37,8 @@ function SkillForm({ isSkillFormOpen }) {
   const handleSubmit = (values, { resetForm }) => {
     dispatch(addSkill({ language: values.skillName, level: values.skillRange }));
 
-    // Get the existing skills data from local storage or initialize an empty array
     const skillsData = JSON.parse(localStorage.getItem('skills')) || [];
 
-    // Push the new skill data into the array
     skillsData.push({ language: values.skillName, level: values.skillRange });
 
     localStorage.setItem('skills', JSON.stringify(skillsData));

@@ -4,6 +4,7 @@ import { fetchSkillsData } from '../../features/skills/SkillsAction';
 import SkillForm from '../../features/skills/skillsForm';
 
 function Skills() {
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,7 +31,9 @@ function Skills() {
   const toggleSkillForm = () => {
     setIsSkillFormOpen(!isSkillFormOpen);
   };
-
+  const updateSkillsData = (newSkillsData) => {
+    setSkillsData(newSkillsData);
+  };
   return (
     <section className="langInfo">
       <h2>Skills</h2>
@@ -41,7 +44,7 @@ function Skills() {
       ) : (
         <div className='skillsContainer'>
           <div className="skillsFormWrapper">
-            {isSkillFormOpen && <SkillForm />}
+          {isSkillFormOpen && <SkillForm updateSkillsData={updateSkillsData} />}
           </div>
           {skillsData.length > 0 ? (
             skillsData.map((skill, index) => (
