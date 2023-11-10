@@ -4,7 +4,6 @@ import { fetchSkillsData } from '../../features/skills/SkillsAction';
 import SkillForm from '../../features/skills/skillsForm';
 
 function Skills() {
-  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -67,6 +66,8 @@ function Skills() {
           )}
         </div>
       )}
+
+        
     </section>
   );
 }

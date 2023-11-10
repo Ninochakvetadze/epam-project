@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
 import { addSkill } from './skillsReducer';
 
+
 function SkillForm({ isSkillFormOpen, updateSkillsData }) {
   const dispatch = useDispatch();
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -35,14 +36,7 @@ function SkillForm({ isSkillFormOpen, updateSkillsData }) {
   };
 
   const handleSubmit = (values, { resetForm }) => {
-    dispatch(addSkill({ language: values.skillName, level: values.skillRange }));
-
-    const skillsData = JSON.parse(localStorage.getItem('skills')) || [];
-
-    skillsData.push({ language: values.skillName, level: values.skillRange });
-
-    localStorage.setItem('skills', JSON.stringify(skillsData));
-
+    dispatch(addSkill({ name: values.skillName, level: values.skillRange }));
     resetForm();
   };
 
@@ -71,8 +65,11 @@ function SkillForm({ isSkillFormOpen, updateSkillsData }) {
               />
               <ErrorMessage name="skillRange" component="div" className="error" />
             </div>
-
-            <button type="submit" className={isButtonDisabled || !isValid ? '' : 'button-enabled'} disabled={isButtonDisabled || !isValid}>
+            <button
+              type="submit"
+              className={isButtonDisabled || !isValid ? '' : 'button-enabled'}
+              disabled={isButtonDisabled || !isValid}
+            >
               Add Skill
             </button>
           </Form>
