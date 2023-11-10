@@ -25,6 +25,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .skillsDescription {
+        color: $secondaryTextcolor;
+    }
     .openForm {
         @media (max-width: 1090px) {
           position: initial;

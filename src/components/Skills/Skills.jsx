@@ -44,17 +44,19 @@ function Skills() {
             {isSkillFormOpen && <SkillForm />}
           </div>
           {skillsData.length > 0 ? (
-            skillsData.map((lang, index) => (
+            skillsData.map((skill, index) => (
               <div key={index} className="lang">
                 <div
                   className="lines"
                   style={{
                     border: "10px solid #26C17E",
-                    width: lang.level + "%",
+                    width: skill.level + "%",
                   }}
                 >
-                  <span>{lang.language}</span>
-                </div>
+                  
+                </div>               
+              <span className='skillsDescription'>{skill.name} - {skill.level}%</span>
+
               </div>
             ))
           ) : (
@@ -62,28 +64,6 @@ function Skills() {
           )}
         </div>
       )}
-      <div className="skills-container">
-          <table>
-            <tbody>
-              <tr className="skills-container__range">
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-            <tbody>
-              <tr className="skills-container__text">
-                <td>Beginner</td>
-                <td>Proficient</td>
-                <td>Expert</td>
-                <td>Master</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
     </section>
   );
 }
